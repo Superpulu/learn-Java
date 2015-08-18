@@ -25,7 +25,7 @@ public class InputOutput
 	System.out.print("Enter width W: ");
 	W = inputvalue.nextInt();
 	A = L * W;
-	halfArea = A / 2;
+	halfArea = A / (float) 2;
 
 	/*
 	 * Output of calculated area.
