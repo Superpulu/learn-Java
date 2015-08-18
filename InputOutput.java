@@ -41,5 +41,12 @@ public class InputOutput
 	System.out.println("isBooked = " + isBooked);
 	System.out.println("signQ = " + signQ + ", smallNumber = " + 
 			   smallNumber + ", someText = " + someText);
+
+	System.out.println("\nWithin for loop:\n");
+	for (int i = 10; i > 5; i--){
+	    float realNumberLoop = 9.03f + i;
+	    System.out.println("realNumberLoop:    " + realNumberLoop);
+	}
+
     }
 }
