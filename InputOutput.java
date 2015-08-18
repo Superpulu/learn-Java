@@ -17,6 +17,10 @@ public class InputOutput
 	// Declaration of some integer variables.	
 	int L, W, A;
 	float halfArea;
+	boolean isBooked = true;
+	char signQ = '\u0051';
+	long smallNumber = -92234645126L;
+	String someText = "Der VfB wird Meister.";
 	
 	Scanner inputvalue = new Scanner(System.in);
 
@@ -33,6 +37,9 @@ public class InputOutput
 	 */
 	System.out.println("The rectangle's area is: " + A + " cm^2");
 	System.out.println("and half the area is: " + halfArea+ " cm^2");
-
+	System.out.println("\nInsert empty line!");
+	System.out.println("isBooked = " + isBooked);
+	System.out.println("signQ = " + signQ + ", smallNumber = " + 
+			   smallNumber + ", someText = " + someText);
     }
 }
