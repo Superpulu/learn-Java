@@ -16,7 +16,8 @@ public class InputOutput
 
 	// Declaration of some integer variables.	
 	int L, W, A;
-
+	float halfArea;
+	
 	Scanner inputvalue = new Scanner(System.in);
 
 	System.out.print("Enter length L: ");
@@ -24,12 +25,14 @@ public class InputOutput
 	System.out.print("Enter width W: ");
 	W = inputvalue.nextInt();
 	A = L * W;
+	halfArea = A / 2;
 
 	/*
 	 * Output of calculated area.
 	 * Area will be given in cm2 in command line.	  
 	 */
 	System.out.println("The rectangle's area is: " + A + " cm^2");
+	System.out.println("and half the area is: " + halfArea+ " cm^2");
 
     }
 }
