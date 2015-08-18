@@ -14,16 +14,19 @@ public class InputOutput
 {
     public static void main(String[] args){
 
-	// Declaration of some integer variables.	
+	// Declaration of some variables of various types.	
 	int L, W, A;
 	float halfArea;
-	boolean isBooked = true;
+	float realNumber = 3.01f;
+	boolean isBooked;
 	char signQ = '\u0051';
 	long smallNumber = -92234645126L;
-	String someText = "Der VfB wird Meister.";
-	
+	String someText = "Der VfB wird Meister.";	
 	Scanner inputvalue = new Scanner(System.in);
 
+	isBooked = true;
+
+	// Prompt for rectangle dimensions and calculate area
 	System.out.print("Enter length L: ");
 	L = inputvalue.nextInt();
 	System.out.print("Enter width W: ");
@@ -37,15 +40,20 @@ public class InputOutput
 	 */
 	System.out.println("The rectangle's area is: " + A + " cm^2");
 	System.out.println("and half the area is: " + halfArea+ " cm^2");
+
+	// Now print above variable types for testing
 	System.out.println("\nInsert empty line!");
 	System.out.println("isBooked = " + isBooked);
 	System.out.println("signQ = " + signQ + ", smallNumber = " + 
-			   smallNumber + ", someText = " + someText);
-
+			   smallNumber + ", someText = " + someText
+			   + ", realNumber= " + realNumber);
+	// ...applying a foor loop
 	System.out.println("\nWithin for loop:\n");
 	for (int i = 10; i > 5; i--){
+	    realNumber = i / (float) 2;
 	    float realNumberLoop = 9.03f + i;
 	    System.out.println("realNumberLoop:    " + realNumberLoop);
+	    System.out.println("realNumber:    " + realNumber);
 	}
 
     }
