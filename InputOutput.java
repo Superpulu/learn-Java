@@ -30,6 +30,11 @@ public class InputOutput
 	Scanner inputvalue = new Scanner(System.in);
 
 	System.out.println("\na = " + a + " b = " + b);
+	a = null; // reference to object removed for a (new address = null)
+	System.out.println("\na = " + a + " b = " + b); 
+	/*
+	  b still references to object
+	*/
 
 	isBooked = true;
 
