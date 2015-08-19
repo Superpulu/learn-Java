@@ -22,6 +22,7 @@ public class TypeConversionPrimitive{
 	System.out.println(valueShort);
 	System.out.println(valueFloat);
 	valueFloat = valueShort/2f; // solved
+	System.out.println(valueFloat);
     }
 
 }
