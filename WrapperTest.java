@@ -16,6 +16,9 @@ public class WrapperTest{
 
 	String newString = numberInteger.toString() + " and " + numberString;
 	System.out.println("\n" + newString);
+
+	Integer numberInteger3 = Integer.valueOf(number);
+	System.out.println("\n" + numberInteger3.intValue());
     }
 
 }
