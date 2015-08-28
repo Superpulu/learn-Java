@@ -23,6 +23,8 @@ public class TypeConversionPrimitive{
 	System.out.println(valueFloat);
 	valueFloat = valueShort/2f; // solved
 	System.out.println(valueFloat);
+	valueFloat = valueShort/ (float) 2; // alternative solution: explicit conversion
+	System.out.println(valueFloat);
     }
 
 }
