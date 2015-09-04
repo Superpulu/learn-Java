@@ -1,5 +1,8 @@
 class Point{
 
+    // public: everybody can access method or variable, such as constructors and methods
+    // private: only class itself has access, such as variables and methods
+
     int x;
     int y;
     String xy;
@@ -12,7 +15,7 @@ class Point{
 
     // another constructor
     Point(){
-	this(0, 0);
+	this(0, 0); // this keyword used as areference of current object
     }
     
     void printPoint(){
@@ -24,20 +27,19 @@ class Point{
 	return new Point((x + other.x) / 2, (y + other.y) / 2);
     }
 
-}
-
-public class Objects{
-    
-    public static void main(String[] args){
-
-	Point p = new Point(); // applies zero constructor
-	p = new Point(3,7); // using defined constructor
-	p.x = 3;
-	p.y = 6;
-	p.printPoint();
-	Point center = new Point();
-	Point other = new Point(3,7);
-	center = p.center(other);
-	center.printPoint();
+    Point scale(){
+	return new Point((x / 2), (y / 2));
     }
+
+    public static void main(String[] args){
+	Point point1 = new Point(50,9);
+	Point point2 = new Point(4,120);
+	Point center = new Point();
+	Point half = new Point();
+	center = point1.center(point2);
+	center.printPoint();
+	half = point1.scale();
+	half.printPoint();
+    }
+
 }
