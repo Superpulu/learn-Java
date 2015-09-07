@@ -1,7 +1,7 @@
 public class Polymorph{
 
     public static void main(String[] args){
-       
+       	
 	class Car {
 	    
 	    public void drive(){
@@ -16,6 +16,23 @@ public class Polymorph{
 
 		super.drive();
 		System.out.println("Got the radio on!");
+	    }
+
+	}
+
+	class JoyRide{
+	    private Car myCar;
+	    
+	    private void park(Car auto){
+		myCar = auto;
+	    }
+	    
+	    private Car whatsInTheGarage(){
+		return myCar;
+	    }
+
+	    public void letsGo(){
+		park(new Ragtop());
 	    }
 
 	}
@@ -37,6 +54,7 @@ public class Polymorph{
 	hymerle = new Ragtop();
 	Ragtop funCar = (Ragtop) hymerle; //works bc hymerle is Ragtop
 	funCar.drive();
-	System.out.println("--------");
+	System.out.println("--------");	
+
     }
 }
