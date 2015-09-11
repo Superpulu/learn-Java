@@ -8,6 +8,7 @@ public class ClassObject
     private static class Point{
 	int x_coord;
 	int y_coord;
+	int n;
 
 	// default constructor
 	Point(){
@@ -36,16 +37,27 @@ public class ClassObject
 	    return this.x_coord;
 	}
 
-	static long calculateFaculty(int n){
+	public long calculateFacultyIteratively(int n){
 	    long facu = 1;
-	    for ( int i = 1; i >= n; i++ )
+	    for ( int i = 1; i <= n; i++ )
 		{
 		    facu *= i;
 		}
 	    return facu;
 	}
-	 
 
+	public long calculateFacultyRecursively(int n){
+	    System.out.println("Called with "+ n);
+	    if ( n >= 1 )
+		{
+		    return n * calculateFacultyRecursively( n - 1 );
+		}
+	    else
+		{
+		    return 1;
+		}
+	}
+	 
     }
 
     class Line{
@@ -53,8 +65,10 @@ public class ClassObject
 	Point point_two;
     }
 
-    //public class Example{
+    public class PointExtended extends Point{
 	
+    }
+
     public static void main(String[] args)
     {
 	// calling default constructor
@@ -67,7 +81,10 @@ public class ClassObject
 	System.out.println("Default constructor x_coord: " + p.x_coord);
 	p.set_x_coord(99);
 	System.out.println("Default constructor x_coord: " + p.get_x_coord());
-	System.out.println("Default constructor x_coord: " + p.calculateFaculty(3));
+	int val = 6;
+	System.out.println("Faculty of " + val + ": " + p.calculateFacultyIteratively(val));
+	long facu = p.calculateFacultyRecursively(val);
+	System.out.println("Faculty of " + val + ": " + facu);
 
 	// calling constructor with one parameter
 	Point p1 = new Point(23);	
@@ -82,7 +99,5 @@ public class ClassObject
 	System.out.println("Parameter constructor y_coord: " + p2.y_coord);
     }
 	
-    //}
-   
 }
 
